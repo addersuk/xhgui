@@ -76,7 +76,7 @@ register_shutdown_function(function() {
 
     $time = array_key_exists('REQUEST_TIME', $_SERVER) ? $_SERVER['REQUEST_TIME'] : null;
     $data['meta'] = array(
-        'url' => $uri,
+        'url' => $_SERVER['HTTP_HOST'] . '://' . $uri,
         'SERVER' => $_SERVER,
         'get' => $_GET,
         'env' => $_ENV,
